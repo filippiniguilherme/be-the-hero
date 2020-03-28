@@ -42,17 +42,16 @@ export default function Detail() {
             </View>
 
             <View style={styles.incident}>
-                <Text style={[styles.incidentProperty, {marginTop: 0}]}>ONG:</Text>
-                <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
+                <Text style={styles.incidentProperty}>ONG:</Text>
+                <Text style={styles.incidentValue}>{incident.name}</Text>
 
                 <Text style={styles.incidentProperty}>Caso:</Text>
                 <Text style={styles.incidentValue}>{incident.title}</Text>
 
                 <Text style={styles.incidentProperty}>Valor:</Text>
                 <Text style={styles.incidentValue}>{Intl.NumberFormat('pt-BR', 
-                    { style: 'currency', currecy: 'BRL'
-                    }).format(incident.value)}
-                </Text>
+                { style: 'currency', currency: 'BRL'
+                }).format(incident.value)}</Text>
             </View>
 
             <View style={styles.contactBox}>
