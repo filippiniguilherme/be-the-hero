@@ -9,7 +9,7 @@ import api from '../../services/api';
 import styles from './styles'
 
 export default function Incidents() {
-    const [incidents, setIncidents] = useState(['']);
+    const [incidents, setIncidents] = useState([]);
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false)
@@ -21,6 +21,7 @@ export default function Incidents() {
     }
 
     async function loadIncidents() {
+
         if (loading) {
             return;
         }
